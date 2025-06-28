@@ -1,0 +1,16 @@
+version: '3'
+services:
+  nodeapp:
+    image: akhilesh/scalability-and-performance
+    ports:
+      - "30-32:3000"   # Map 3 ports for 3 containers
+    deploy:
+      replicas: 3
+
+# This will start 3 containers mapped to ports 30, 31, and 32.
+# docker compose up --scale nodeapp=3
+
+# If not using Compose, you can just run 3 containers manually with different ports.
+# docker run -d --name node1 -p 30:3000 akhilesh/scalability-and-performance
+# docker run -d --name node2 -p 31:3000 akhilesh/scalability-and-performance
+# docker run -d --name node3 -p 32:3000 akhilesh/scalability-and-performance
