@@ -17,7 +17,7 @@ USER node
 
 EXPOSE 3000
 
-CMD ["npx", "ts-node-dev", "--respawn", "src/index.ts"]
+CMD ["npx", "ts-node-dev", "--respawn", "src/cluster.ts"]
 
 
 # sudo docker build -t  akhilesh/scalability-and-performance .
